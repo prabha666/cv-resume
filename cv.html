@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cv using html css</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>@import url('http://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins',sans-serif;
+    }
+    body{
+        background: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container{
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 1000px;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        box-shadow: 0,35px,55px,rgba(0,0,0,0.1);
+        margin: 50px;
+    }
+    .container .left-side{
+        position: relative;
+        background: #003147;
+        padding: 40px;
+        box-shadow: 0,35px,55px,rgba(202, 194, 194, 0.705);
+    }
+    .profileText{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2px;
+        border-bottom: 3px solid rgb(247, 232, 232);
+    }
+    .profileText .imgBx{
+        position: relative;
+        width: 200px;
+        height: 150px;
+        border-radius: 40%;
+        overflow: hidden;
+        border: 3px solid rgb(97, 96, 96);
+    }
+    .profileText .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: center;
+    }
+    .profileText h2{
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.6em;
+    }
+    .profileText h2 span{
+        font-size: 0.7em;
+        font-weight: 250;
+    }
+    .project h4
+    {
+        color:  rgb(247, 232, 232);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 15px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    .contactInfo{
+        padding-top: 40px;
+    }
+    .contactInfo h3{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    
+    }
+    .contactInfo ul{
+        position: relative;
+    }
+    .contactInfo ul li{
+        list-style: none;
+        position: relative;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .contactInfo ul li .icon{
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: #03a9f4;
+    }
+    .contactInfo ul li span{
+        color: #fff;
+    }
+    .icon-info ul li{
+       list-style: none;
+    }
+    .icon-info ul li{
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: #03a9f4;
+        position: relative;
+        align-items: center;
+    }
+    .icon-info ul li{
+        display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .skill{
+        color: #fff;
+        font-weight: 300;
+         list-style: none;
+    }
+    .skill .tittle{
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .skill ul li{
+        text-transform: uppercase;
+        list-style: none;
+        margin-top: 10px;
+        }
+    .skill ul li span{
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background: rgb(15, 13, 13);
+        display: block;
+        margin-top: 10px;
+    
+    }
+    .skill ul li span div{
+        position: relative;
+        background: #fff;
+        top: auto;
+        height: 4px;
+        width: auto;
+    }
+    
+      
+    .container .right-side{
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        box-shadow: 0,35px,55px,rgba(0,0,0,0.1);
+        
+    }
+    .about{
+        margin-bottom: 30px;
+        
+    }
+    .tittle2{
+        color: #03a9f4;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    } 
+    p{
+        color: black;
+         margin-right: 30px;
+    }
+    .about1 .tittle3{
+        text-transform: uppercase;
+        color: #03a9f4;
+    }
+    .about1 .box{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+        
+    
+    }
+    .about1 .box .college{
+      min-width: 150px;
+    }
+    .about1 .box .college h5{
+        text-transform: uppercase;
+        color: #03a9f4;
+        font-family: 600;
+        
+        
+    }
+    .about1 .box .text1 h4{
+        text-transform: lowercase;
+        color: black;
+       text-align: right;
+       
+       margin-left: 50px;
+       
+       margin-right: 60px;
+       
+    
+    }</style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="left-side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="student3.jpeg" >
+                </div>
+                <h2>Prabha Patel <br><span>SDE-1</span></h2>
+            </div>
+            <div class="project">
+                <h4>Web Development | MERN Stack Developer | Full Stack Devloper</h4>
+            </div>
+        
+            <div class="icon-info">
+                <ul>
+                    <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-github" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+            <div class="contactInfo">
+                <h3>contact info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">+91-8269527512</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="text">prabhapatel666@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">www.mywebsite.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span class="text">www.linkedin.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">Madhay pradesh,India</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill">
+             <h3 class="tittle">skills </h3>
+             <ul>
+                <li>html <span><div style="width:90%"></div></span> </li>
+                
+                <li>css <span><div style="width:80%"></div></span> </li>
+               
+                <li>javascript <span><div style="width:70%"></div></span> </li>
+                
+                <li>react <span><div style="width:60%"></div></span></li>
+               
+                <li>nodejs <span><div style="width:50%"></div></span> </li>
+               
+                <li>mongoDB <span><div style="width:40%"></div></span> </li>
+               
+                <li>mysql <span><div style="width:30%"></div></span> </li>
+              
+                <li>php <span><div style="width:20%"></div></span> </li>
+             </ul>
+            </div>
+        </div>
+        <div class="right-side">  
+           <div class="about">
+             <h2 class="tittle2">About me</h2>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                Ipsam nobis aliquam eveniet quam facilis debitis magnam, repudiandae cumque quia adipisci incidunt mollitia. Cumqu
+                 officia culpa, nesciunt nam beatae maxime quae!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis veniam consequatur quae fuga eligendi c
+                orporis sequi est libero dolorum,inventore voluptatum doloribus accusamus perferendis eveniet beatae quasi id!</p>
+               </div> 
+           <div class="about1">
+              <h2 class="tittle3">Education</h2>
+              <div class="box">
+                <div class="college">
+                    <h5>Bachelors in Engineering</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam 
+                        incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                   </div>
+                   <div class="text1">
+                    <h4>MITS gwalior m.p.</h4>
+                    <h4>2018-19</h4>
+                   </div>
+                </div>
+                <div class="box">
+                    <div class="college">
+                        <h5>12<sup>th</sup>Board Standard</h5>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                       </div>
+                       <div class="text1">
+                        <h4>Gov.H.S.S</h4>
+                        <h4>2013-14</h4>
+                       </div>
+                    </div>
+                    <div class="box">
+                        <div class="college">
+                      <h5></h>Diploma in computer Science</h5>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                    </div>
+                <div class="text1">
+                <h4>Gov.poly technic college</h4>
+                  <h4>2016-17</h4>
+                           </div>
+                        </div>
+                        
+
+             </div> 
+         
+             <div class="about1">
+                <h2 class="tittle3">EXperience</h2>
+                <div class="box">
+                  <div class="college">
+                      <h5>Cloud Architect</h5>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam 
+                        incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                     </div>
+                     <div class="text1">
+                      <h4>Google</h4>
+                      <h4>2018-19</h4>
+                     </div>
+                  </div>
+                  <div class="box">
+                      <div class="college">
+                          <h5>12<sup>th</sup>Senior UX Manager</h5>
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                         </div>
+                         <div class="text1">
+                          <h4>Amazon</h4>
+                           <h4>2013-14</h4>
+                         </div>
+                      </div>
+                      
+                     <div class="about1">
+                        <h2 class="tittle3">Project</h2>
+                        <div class="box">
+                          <div class="college">
+                              <h5>Resume Builder</h5>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam 
+                                  incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                             </div>
+                             <div class="text1">
+                               <h4>HTML,Css,javascript</h4>
+                                <h4>2018-19</h4>
+                             </div>
+                          </div>
+                            <div class="box">
+                              <div class="college">
+                                <h5>music maker</h5>
+                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ad numquam incidunt, eveniet ab quos iusto distinctio iure temporibus.</p>
+                                 </div>
+                                    <div class="text1">
+                                      <h4>python,mysql,react</h4>
+                                       <h4>2018-19</h4>
+                                 </div>
+                              </div>
+        </div>
+</body>
+</html>
